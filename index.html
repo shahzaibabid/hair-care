@@ -7,24 +7,100 @@
     <title>hair-care</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!-- Font Awesome icons (free version)-->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <style>
-    .navbar{
-        background-color: blue;
-    }
-</style>
+    #header {
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+.topbar {
+    background-color:  #000;
+    color: #ecb807;
+    padding: 4px 0px;
+}
+.topbar ul{
+  margin: 0px;
+  padding: 0px;
+}
+.topbar ul li {
+    float: left;
+    list-style: none;
+    margin: 3px 7px;
+    font-size: 15px;
+}
+.topbar ul li a{
+  color: #fff;
+}
+.topbar ul li i {
+    font-size: 18px;
+    margin-right: 3px;
+}
+.topbar ul li.followus-label {
+    font-weight: bold;
+}
+#header .social-icon {
+    float: right;
+}
+
+@media (max-width: 991px){
+.topbar ul li {
+    margin: 3px 3px;
+    font-size: 12px;
+}
+#header ul.navbar-nav {
+    position: static;
+    width: 100%;
+    border-top: 1px solid #ddd;
+    margin: 15px 0px 0px;
+}
+}
+</style> 
 <body>
   <!-- header start -->
+  <div id="header">
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8">
+            <ul>
+              <li><i class="fa fa-volume-control-phone" aria-hidden="true"></i> +610414005800</li>
+              <li>|</li>
+              <li><a href="mailto:"><i class="fa fa-envelope-o" aria-hidden="true"></i> example@youremail.com</a></li>
+              <li>|</li>
+              <li><i class="far fa-clock"> aria-hidden="true"></i> 24/7 Hours Working</li>
+            </ul>
+          </div>
+          <div class="col-sm-4">
+            <ul class="social-icon">
+              <li class="followus-label">Follow Us:</li>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header>
 
+    </header>
+  </div>
   <!-- header end -->
     
   <!-- nav-bar start -->
   
-  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-    <a class="navbar-brand" href="#" >Navbar</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger" >
+    <a class="navbar-brand" href="#" >Hair-care</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
