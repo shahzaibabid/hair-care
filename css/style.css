@@ -6,7 +6,7 @@
 }
 
 .topbar {
-    background-color:  #000;
+    background-color:#000;
     color: #ecb807;
     padding: 4px 0px;
 }
@@ -62,9 +62,7 @@
 
 fieldset, label { margin: 0; padding: 0; }
 body{ margin: 20px; }
-h1 { font-size: 1.5em; margin: 10px; }
-
-/****** Style Star Rating Widget *****/
+h1 { font-size: 1.5em; margin: 10px;}
 
 .rating { 
   border: none;
@@ -92,22 +90,20 @@ h1 { font-size: 1.5em; margin: 10px; }
 
 }
 
-/***** CSS Magic to Highlight Stars on Hover *****/
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label {color:#ecb807;} 
 
-.rating > input:checked ~ label, /* show gold star when clicked */
-.rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #ecb807;  } /* hover previous stars in list */
-
-.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked + label:hover, 
 .rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #ecb807;}
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label {color:#ecb807;}
 
 .container {
   position: relative;
 }
 
-/* Bottom right text */
+
 .text-block {
   position: absolute;
   bottom: 20px;
@@ -119,13 +115,6 @@ h1 { font-size: 1.5em; margin: 10px; }
   padding-top: 10px;
   padding-bottom: 5px;
 }
-
-/* .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-} */
 
 .pg-footer{
     width: 100%;
