@@ -52,6 +52,80 @@
     border-top: 1px solid #ddd;
     margin: 15px 0px 0px;
 }}
+.gl-eyebrow-style{
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Gotham-Medium", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float:left;
+  padding: 0px 110px;
+}
+
+.rating > input {display: none;} 
+.rating > label:before { 
+  margin: 3px;
+  font-size: 1.2em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+  float: right; 
+
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #ecb807;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #ecb807;}
+
+.container {
+  position: relative;
+}
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  left: 100px;
+  background-color: black;
+  color: white;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+/* .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */
 
 .pg-footer{
     width: 100%;
