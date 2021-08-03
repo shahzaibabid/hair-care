@@ -132,8 +132,9 @@ h1 { font-size: 1.5em; margin: 10px;}
 /* HERO */
 
 .bg-hero {
-  background-image: url("imag23");
+  background-image: url("img23");
   background-position: right top;
+
   background-color: #f7f5f6;
   height: 230px;
   background-size: contain;
@@ -161,6 +162,7 @@ h1 { font-size: 1.5em; margin: 10px;}
 .rect_red p {
   color: #ffffff !important;
 }
+
 .masks_title {
  margin-top: 7%;
  margin-bottom: 10px;
@@ -170,7 +172,7 @@ h1 { font-size: 1.5em; margin: 10px;}
 }
 
 .bg-masks {
-  background-image: url("imag21");
+  background-image: url("img21");
   background-position: left top;
   background-color: #efe7e7;
   height: 180px;
@@ -573,7 +575,7 @@ h3:hover {
     text-align: center;
     border:1px solid white;
     margin-bottom: 0px;
-    border-color:#ecb807
+    border-color:#ecb807;
 }
 
 .navbar-toggler{
