@@ -504,7 +504,7 @@ h3 {
 
 h3:hover {
   background: -webkit-linear-gradient(#f88e66, #bfaf36);
-  -webkit-background-clip: text;
+  
   -webkit-text-fill-color: transparent;
 }
 
