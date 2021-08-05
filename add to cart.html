@@ -15,7 +15,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-	
+<link rel="stylesheet" href="css/fancySelect.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/all.css" />
+<link media="screen" rel="stylesheet" type="text/css" href="css/screen.css" />
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
 
 <body>
  <!-- nav-bar start -->
@@ -108,7 +115,92 @@
 </div>
 <!-- nav-bar end -->
 
-
+<!-- add to cart start -->
+<div id="wrapper">
+    <div class="wrapper-holder">
+       
+        
+        <section id="main">
+            <ul class="list-table">
+                <li>
+                    <div class="rows rows-item">
+                        <img src="images/dryer.png" height="99" width="99" alt="" />
+                        <h3 style="color: black;">Dryer</h3>
+                    </div>
+                    <div class="rows-holder">
+                        <div class="rows rows-select">
+                            <div class="row">
+                                <label for="size" style="color: black;">Size:</label>
+                                <select id="size">
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows rows-select">
+                            <div class="row">
+                                <label for="quantity" style="color: black;">Quantity:</label>
+                                <select id="quantity">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows rows-price">
+                            <span style="margin-left: 10px; color: black;">Rs 2500.00</span>
+                        </div>
+                        <div class="rows rows-delete">
+                            <a class="btn-delete" href="#">delete</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="rows rows-item">
+                        <img src="images/massagar.png" height="99" width="99" alt="" />
+                        <h3 style="color: black;">Massager</h3>
+                    </div>
+                    <div class="rows-holder">
+                        <div class="rows rows-select">
+                            <div class="row">
+                                <label for="sort" style="color: black;">Size:</label>
+                                <select id="sort">
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                    <option>XXXL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows rows-select">
+                            <div class="row">
+                                <label for="quantity-2" style="color: black;">Quantity:</label>
+                                <select id="quantity-2">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="rows rows-price">
+                            <span style="margin-left: 10px;color: black;">Rs 2000.00</span>
+                        </div>
+                        <div class="rows rows-delete">
+                            <a class="btn-delete" href="#">delete</a>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+            
+                           
+                        <div class="row row-total">
+                            <h4 class="total" style="margin-left: 200px; color: black;">Total to pay:  <strong style="color: black;">Rs 4500.00</strong></h4>&nbsp;&nbsp;
+                            <input type="submit" class="btn black normal"  value="Make a payment" />
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+<!-- add to cart end -->
 <!-- footer start -->
 <div id="pg-footer">
     <div class="topbar">
@@ -166,7 +258,13 @@
     </div>
   </div>
   <!-- footer end -->
-  <center><p class="footer">&COPY; 2021 Hair-Care | Design by Hayyan zuberi and Shahzaib abid</p></center>
+  <center><p class="footer">&COPY; 2021 Hair-Care | Design by Hayyan / Shahzaib </p></center>
   <script src="js/app.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+	<script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+	<script type="text/javascript" src="js/fancySelect.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
