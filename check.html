@@ -28,577 +28,704 @@
     body{
         background-color: black;
     }
-  .pg-footer{
-    width: 100%;
-    height: 180px;
-    background-color:white;
+  
+
+/* land */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,500,700');
+
+/* Global */
+* {
+  box-sizing: border-box;
+}
+body{
+  color: #090b08;
+  margin:  0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  background-color: #ffe9ef;
+}
+h1{
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 1.5em;
+  text-transform: uppercase;
+}
+h2{
+  text-transform: uppercase;
+}
+h4{
+  font-size: .8em;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+h6{
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+  color: #090b08;
+}
+ul{
+  list-style: none;
+}
+section{
+  padding: 5.8em 2em 0;
+}
+.title{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 1em;
+}
+.title.title-right{
+  justify-content: flex-end;
+}
+.line{  
+  width: 3em;
+  height: 1px;
+  background-color: #000;
+  margin-right: 1em;
+}
+.line.line-right{
+  order: 2;
+  margin-right: 0;
+  margin-left: 1em;
+}
+.btn{
+  display: inline-block;
+  padding: .5em 1.5em;
+  border: solid 1px #090b08;  
+  transition: all .3s ease-in;
+}
+.btn:hover, .btn:focus{
+  transform: translate(0px, -2px);
+  -webkit-box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 7px -9px rgba(0,0,0,0.75);
+  transition: all .3s ease-out; 
+}
+
+/* Header */
+header{
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-around;
+  z-index: 1;
+}
+header:before{
+  content: "";
+  position: absolute;
+  background-color: #ffe9ef;
+  width: 100%;
+  height: 68%;
+  z-index: -1;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.22);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.22);
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.22);
+}
+.nav-brand img{
+  width: auto;
+  padding-top: 1em;
+  height: 7.5em;
+}
+.toggle-menu{
+  display: block;
+  font-size: 1.2em;
+  align-self: center;
+  cursor: pointer;
+}
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]:hover ~ .toggle-menu,
+input[type="checkbox"]:checked ~ .toggle-menu
+{
+  border-bottom: solid 1px #090b08;
+}
+input[type="checkbox"]:checked ~ .navbar{
+  display: flex;
+  flex-direction: column;
+}
+.navbar{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffe9ef;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: -2;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 4em 0 0;
+}
+a.nav-link{
+  margin-right: 0;
+}
+a.nav-link:hover,
+a.nav-link:active,
+a.nav-link:focus{
+  border-bottom: solid 1.8px #090b08;
+}
+.menu li{
+  margin-top: 3em;
+}
+.social-menu{
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+.social-menu li a{
+  margin: 0 .5em;
+  padding: .5em;
+}
+.social-menu li a{
+  font-size: 1.2em;
+}
+.social-menu li a:hover,
+.social-menu li a:active,
+.social-menu li a:focus
+{
+  border-bottom: solid 1px #000;
+}
+
+/* Hero Section */
+.hero {
+	display: flex;
+	height: 100vh;
+	align-items: center;
+	background: #f5d9d6 url("https://i.postimg.cc/9fTzqwtw/flower2.png") no-repeat right bottom;
+}
+.hero-img img{
+  display: none;
+}
+.hero-text{
+  padding: 0 2em 7.5em;
+}
+
+/* Featured Section */
+#featured .image img{
+  width: 100%;
+  height: auto;
+}
+.text{
+  text-align: center;
+  padding-top: 1em;
+}
+.text p{
+  text-align: justify;
+  padding-bottom: 1em;
+  line-height: 1.4em;
+}
+
+/* Collections Section */
+.box{
+  display: block;
+  position: relative;
+  padding: 1.3em;
+  background-color: #f5d9d6;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.box-overlay {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+	border: solid 3px #fff;
+	transform: translate(8px, 8px);
+  transition: all 1s ease;
+}
+.box:last-child{
+  margin-bottom: 5.8em;
+}
+.box:hover .box-overlay,
+.box:focus .box-overlay
+{
+  transform: translate(0px, 0px) scale(0.92, 0.8);
+}
+
+/* About Section */
+#about{
+  background-color: #f5d9d6;
+}
+section#about{
+  padding-bottom: 5.8em;
+}
+#about .text{
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 2em;
+}
+#about .text p{
+  padding-bottom: 0;
+  text-align: left;
+}
+.video-wrapper{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+  height: 0;
+}
+.video-wrapper iframe{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact Section */
+section#contact{
+  padding: 3em 2em .5em;
+}
+.form-wrapper:after,
+.contact-wrapper:after{
+  display: block;
+  content: "";
+  margin: 2em auto;
+  border-bottom: solid 1px #dadada;
+}
+form{
+  display: flex;
+}
+form input:first-child{
+  flex: 1 0 80%;
+  background-color: transparent;
+}
+form input:last-child{
+  flex: 1 0 20%;
+  border-left: 0;  
+  cursor: pointer;
+  background-color: #f5d9d6;
+  transition: all .25s ease;
+}
+#submit:hover {
+	background-color: #000;
+	color: #fff;
+  transition: all .25s ease;
+}
+input{
+  padding: 1em;
+  border: 1px solid #000;
+}
+.contact-wrapper .wrapper{
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.contact-wrapper .social-menu{
+  flex: 1 0 100%;
+  justify-content: center;
+}
+.contact-wrapper .social-menu li a {
+	font-size: 1.5em;
+  padding: 0;
+  margin: 0 1.5em 0 0;
+}
+.contact-wrapper a i{
+  width: 100%;
+  padding-bottom: .2em;
+}
+.contact-footer{
+  padding: 1em 0;
+  border: 1px solid #000;
+}
+.contact-footer:last-child{
+  border-left: 0;
+}
+.contact-footer:hover{
+  background-color: #f5d9d6;
+}
+.contact-tel{
+  flex: 1 0 50%;
+}
+.contact-email{
+  flex: 1 0 50%;
+}
+.copy-wrapper a{
+  font-weight: 700;
+}
+
+/* Responsive Style */
+@media(min-width: 320px){
+  
+}
+@media(min-width: 576px){
+  /*  Global  */
+  h1{
+    font-size: 2em;
+  }
+  
+  /*  Hero Section  */
+  .hero{
+    background-image: none;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .hero-img{
+    padding-top: 6.5em;
+  }
+  .hero-img img{
+    display: block;
+    width: 14em;
+    height: auto;
+  }
+  .hero-text{
+    padding: 0 2em;
+  }
+  
+  /*  Featured Section  */
+  .text{
+    margin: 2em 2em auto;
+  }
+  
+  /*  Collections Section  */
+  #collections .wrapper{
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    margin-bottom: 100px;
-    box-sizing: border-box;
-    border-radius: 10px;
   }
-  .footer{
-    width: 100%;
-    height: 30px;
-    background: #000;
-    color: white;
-    text-align: center;
-    border:1px solid white;
-    margin-bottom: 0px;
-    border-color:#ecb807;
+  .box{
+    padding: 3.2em;
   }
-  /* descript start */
-  .picZoomer{
-	position: relative;
-    /*margin-left: 40px;
-    padding: 15px;*/
+  .box1{
+    flex: 1 0 47%;
+    margin-right: 1em;
+  }
+  .box2{
+    flex: 1 0 47%;
+  }
+  .box3{
+    flex: 2 0 100%;
+  }
+  
+  /*  About Section  */
+  .video-wrapper{
+    margin: 0 2em;
+  }
 }
-.picZoomer-pic-wp{
-	position: relative;
-	overflow: hidden;
-    text-align: center;
-}
-.picZoomer-pic-wp:hover .picZoomer-cursor{
-	display: block;
-}
-.picZoomer-zoom-pic{
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-.picZoomer-zoom-wp{
-	display: none;
-	position: absolute;
-	z-index: 999;
-	overflow: hidden;
-    border:1px solid #eee;
-    height: 460px;
-    margin-top: -19px;
-}
-.picZoomer-cursor{
-	display: none;
-	cursor: crosshair;
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-radius: 50%;
-	border: 1px solid #eee;
-	background-color: rgba(0,0,0,.1);
-}
-.picZoomCursor-ico{
-	width: 23px;
-	height: 23px;
-	position: absolute;
-	top: 40px;
-	left: 40px;
-	background: url(images/zoom-ico.png) left top no-repeat;
-}
-
-.my_img {
-    vertical-align: middle;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    height: 100%;
-}
-.piclist li{
-    display: inline-block;
-    width: 90px;
-    height: 114px;
-    border: 1px solid #eee;
-}
-.piclist li img{
-    width: 97%;
+@media(min-width: 768px){
+  /*  Global  */
+  .wrapper{
+    display: flex;
+  }
+  
+  /*  Header  */
+  .nav-brand img{
+    height: 10em;
+  }
+  .toggle-menu{
+    display: none;
+  }
+  .navbar{
+    display: flex;
+    position: relative;
     height: auto;
-}
-
-/* custom style */
-.picZoomer-pic-wp,
-.picZoomer-zoom-wp{
-    border: 1px solid #eee;
-}
-
-
-
-.section-bg {
-    background-color: #fff1e0;
-}
-section {
-    padding: 60px 0;
-}
-.row-sm .col-md-6 {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-/*===pic-Zoom===*/
-._boxzoom .zoom-thumb {
-    width: 90px;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 0px;
-}
-._boxzoom .zoom-thumb ul.piclist {
-    padding-left: 0px;
-    top: 0px;
-}
-._boxzoom ._product-images {
-    width: 80%;
-    display: inline-block;
-}
-._boxzoom ._product-images .picZoomer {
-    width: 100%;
-}
-._boxzoom ._product-images .picZoomer .picZoomer-pic-wp img {
-    left: 0px;
-}
-._boxzoom ._product-images .picZoomer img.my_img {
-    width: 100%;
-}
-.piclist li img {
-    height:100px;
-    object-fit:cover;
-}
-
-/*======products-details=====*/
-._product-detail-content {
-    background: #fff;
-    padding: 15px;
-    border: 1px solid lightgray;
-}
-._product-detail-content p._p-name {
-    color: black;
-    font-size: 20px;
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 12px;
-}
-.p-list span {
-    margin-right: 15px;
-}
-.p-list span.price {
-    font-size: 25px;
-    color: #318234;
-}
-._p-qty > span {
-    color: black;
-    margin-right: 15px;
-    font-weight: 500;
-}
-._p-qty .value-button {
-    display: inline-flex;
-    border: 0px solid #ddd;
-    margin: 0px;
-    width: 30px;
-    height: 35px;
-    justify-content: center;
-    align-items: center;
-    background: #fd7f34;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #fff;
-}
-
-._p-qty .value-button {
-    border: 0px solid #fe0000;
-    height: 35px;
-    font-size: 20px;
-    font-weight: bold;
-}
-._p-qty input#number {
-    text-align: center;
-    border: none;
-    border-top: 1px solid #fe0000;
-    border-bottom: 1px solid #fe0000;
-    margin: 0px;
-    width: 50px;
-    height: 35px;
-    font-size: 14px;
-    box-sizing: border-box;
-}
-._p-add-cart {
-    margin-left: 0px;
-    margin-bottom: 15px;
-}
-.p-list {
-    margin-bottom: 10px;
-}
-._p-features > span {
-    display: block;
-    font-size: 16px;
-    color: #000;
-    font-weight: 500;
-}
-._p-add-cart .buy-btn {
-    background-color: #fd7f34;
-    color: #fff;
-}
-._p-add-cart .btn {
-    text-transform: capitalize;
-    padding: 6px 20px;
-    /* width: 200px; */
-    border-radius: 52px;
-}
-._p-add-cart .btn {
-    margin: 0px 8px;
-}
-
-/*=========Recent-post==========*/
-.title_bx h3.title {
-    font-size: 22px;
-    text-transform: capitalize;
-    position: relative;
-    color: #fd7f34;
-    font-weight: 700;
-    line-height: 1.2em;
-}
-.title_bx h3.title:before {
-    content: "";
-    height: 2px;
-    width: 20%;
-    position: absolute;
-    left: 0px;
+    width: auto;
+    background-color: transparent;
     z-index: 1;
-    top: 40px;
-    background-color: #fd7f34;
-}
-.title_bx h3.title:after {
-    content: "";
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    top: 40px;
-    background-color: #ffc107;
-}
-.common_wd .owl-nav .owl-prev, .common_wd .owl-nav .owl-next {
-    background-color: #fd7f34 !important;
+  }
+  .menu{
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-end;
+  }
+  .social-menu{
+    display: none;
+  }
+  .menu li{
+    margin-top: 0;
+  }
+  a.nav-link{
+    margin-right: 3em;
+  }
+  
+  /*  Featured Section  */  
+  .text{
+    text-align: left;    
+    margin: 0 0 auto 4em;
+  }
+  #featured .text{
+    flex: 1;
+    order: 1;
+  }
+  #featured .image{
+    flex: 1 0 12em;
+    order: 2;
+  }
+  
+  /*  Collections Section  */
+  #collections .wrapper{
+    margin: 0 4em;
+  }
+  
+  /*  About Section  */
+  #about .wrapper{
     display: block;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    border-radius: 0px !important;
+  }
+  #about .text{
+    margin-right: 4em;
+  }
+  .video-wrapper{
+    margin: auto 4em;
+  }
+  
+  /* Contact Section  */
+  #contact .wrapper{
+    flex-wrap: wrap;
+  }
+  .form-wrapper, .contact-wrapper{
+    flex: 1 0 50%;
+    align-self: center;
+    padding: 0 1em;
+  }
+  .copy-wrapper{
+    flex: 1 0 100%;
+    padding: 0 1em;
+  }
+  .form-wrapper:after,
+  .contact-wrapper:after{
+    display: none;
+  }
+  .contact-footer{
+    border: 0;
+    padding: 0;
+    margin: .6em auto;
+    text-align: left;
+  }
+  .contact-footer:hover{
+    background-color: transparent;
+  }
+  
+  .contact-wrapper a i{
+    width: auto;
+    padding-right: 1em;
+  }
+  .contact-wrapper .social-menu{
+    display: flex;
+    order: 3;
+    justify-content: flex-start;
+  }
+  .contact-wrapper .social-menu a i{
+    padding-right: 0;
+  }
+  .copy-wrapper:before{
+    display: block;
+    content: "";
+    margin: 2em auto;
+    border-bottom: solid 1px #dadada;
+  }
 }
-.owl-nav .owl-next {
-    right:-10px;
+@media(min-width: 992px){
+  /*  Global  */
+  section{
+    padding: 5.8em 7em 0;
+  }  
+  .title.title-left{
+    margin-left: -2.5em;
+  }
+  .title.title-right{
+    margin-right: -2.5em;
+  }
+  .line{
+    width: 5.5em;
+  }
+  
+  /*  Hero Section  */
+  .hero-img img{
+    width: 14.5em;
+  }
+  
+  /*  Featured Section  */
+  #featured .image{
+    margin-top: -2em;
+  }
+  
+  /* About Section  */
+  #about .wrapper{
+    display: flex;
+  }
+  #about .text{
+    flex: 1 0 40%;
+    margin-right: 1em;
+    padding-bottom: 0;
+  }
+  .video-wrapper{
+    flex: 2 0 55%;
+    padding-bottom: 33.25%;
+    align-self: center;
+    margin: 1.4em 0;        
+  }
+  .contact-tel{
+    flex-basis: 20%;
+  }
 }
-.owl-nav .owl-prev, .owl-nav .owl-next {
-    top:50%;
-    position: absolute;
-}
-.common_wd .owl-nav .owl-prev i, .common_wd .owl-nav .owl-next i {
-    color: #fff;
-    font-size: 14px !important;
-    position: relative;
-    top: -1px;
-}
-.common_wd .owl-nav {
-    position: absolute;
-    top: -21%;
-    right: 4px;
-    width: 65px;
-}
-.owl-nav .owl-prev i, .owl-nav .owl-next i {
-    left: 0px;
-}
-._p-qty .decrease_ {
-    position: relative;
-    right: -5px;
-    top: 3px;
-}
-
-._p-qty .increase_ {
-    position: relative;
-    top: 3px;
-    left: -5px;
-}
-/*========box========*/
-.sq_box {
-    padding-bottom: 5px;
-    border-bottom: solid 2px #fd7f34;
-    background-color: #fff;
-    text-align: center;
-    padding: 15px 10px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-}
-.item .sq_box span.wishlist {
-    right: 5px !important;
-}
-.sq_box span.wishlist {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-}
-.sq_box span {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0px 10px;
-}
-.sq_box span.wishlist i {
-    color: #adb5bd;
-    font-size: 20px;
-}
-.sq_box h4 {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    color: #343a40;
-    margin-top: 10px;
-    margin-bottom: 10px !important;
-}
-.sq_box .price-box {
-    margin-bottom: 15px !important;
-}
-.sq_box .btn {
-    border-radius: 50px;
-    padding: 5px 13px;
-    font-size: 15px;
-    color: #fff;
-    background-color: #fd7f34;
-    font-weight: 600;
-}
-.sq_box .price-box span.price {
-    text-decoration: line-through;
-    color: #6c757d;
-}
-.sq_box span {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0px 10px;
-}
-.sq_box .price-box span.offer-price {
-    color:#28a745;
-}
-.sq_box img {
-    object-fit: cover;
-    height: 150px !important;
-    margin-top: 20px;
-}
-.sq_box span.wishlist i:hover {
-    color: #fd7f34;
+@media(min-width: 1200px){
+  /*  Global  */
+  h1{
+    font-size: 2.4em;
+  }
+  section{
+    padding: 5.8em 11em 0;
+  }
+  
+  /*  Hero Section  */
+  .hero-img img{
+    width: 15.5em;
+  }
+  
+  /*  Featured Section  */
+  #featured .image{
+    margin-top: -4em;
+  }
+  
+  /*  About Section  */
+  #about .text{
+    padding-right: 3em;
+    padding-bottom: 0;
+  }
+  .video-wrapper{
+    margin: 0;
+  }
 }
   </style>
 <body>
- <!-- nav-bar start -->
- <nav style="background-color: black;" class="navbar navbar-expand-lg navbar-light " >
-    <button style="color: white;" class="navbar-toggler navbar-light"  type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link active" href="home.html" style=" color:#ecb807;font-family: rockwell  " >Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link active" href="remedies.html" style=" color:#ecb807; font-family: rockwell"> Remedies <span class="sr-only">(current)</span></a>
-          </li>
-        <li style="color:#ecb807;" class="nav-item dropdown">
-          <a class="nav-link active dropdown-toggle" href="treatment.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ecb807; font-family: rockwell">
-            Treatment
-          </a>
-          
-          <div style="color:#ecb807;" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="hair-loss.html"style="  font-family: rockwell "  >Hair loss</a>
-            <a class="dropdown-item" href="gray.html"style="font-family: rockwell "  >Graying</a>
-            <a class="dropdown-item" href="growth.html"style="font-family: rockwell "  >Growth method</a>
-            <a class="dropdown-item" href="bald.html"style="font-family: rockwell "  >Premature baldness</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="our equipments.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="  color:#ecb807; font-family: rockwell">
-              Our equipments
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="dryer.html"style="font-family: rockwell "  >Dryer</a>
-              <a class="dropdown-item" href="straightner.html"style="font-family: rockwell "  >Straightners</a>
-              <a class="dropdown-item" href="spray.html"style="font-family: rockwell "  >Spray bottles</a>
-              <a class="dropdown-item" href="steamer.html"style="font-family: rockwell "  >Streamers</a>
-              <a class="dropdown-item" href="massagar.html"style="font-family: rockwell "  >Massagers</a>
-              <a class="dropdown-item" href="spa caps.html"style="font-family: rockwell "  >Spa caps</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="care products.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ecb807; font-family: rockwell">
-              Care products
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Hair cream</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Shampoo</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Conditioner</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Masks</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Serums</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Hair spray</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Various hair oils</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="Guide.html" style="color:#ecb807; font-family: rockwell">Guideline <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ecb807; font-family: rockwell">
-              Product detail
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Hair cream</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Shampoo</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Conditioner</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Masks</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Serums</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Hair spray</a>
-              <a class="dropdown-item" href="#"style="font-family: rockwell "  >Various hair oils</a>
-            </div>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="comparision.html" style="color:#ecb807; font-family: rockwell">Comparison <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="gallery.html" style="color:#ecb807; font-family: rockwell">Gallery <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="Techno.html" style="color:#ecb807; font-family: rockwell">Latest technology <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="Feedback.html" style="color:#ecb807; font-family: rockwell">Feedback <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link active" href="contact.html" style="color:#ecb807; font-family: rockwell">Contact-us <span class="sr-only">(current)</span></a>
-          </li>
-      </ul>
-      </ul>
-  </nav>
-</div>
-<!-- nav-bar end -->
-
-<!-- description start -->
-<section id="services" class="services section-bg">
-    <div class="container-fluid">
-     
-       <div class="row row-sm">
-          <div class="col-md-6 _boxzoom">
-             <div class="zoom-thumb">
-                <ul class="piclist">
-                   <li><img src="images/cream1.jpg" alt=""></li>
-                   <li><img src="images/cream2.jpg" alt=""></li>
-                   <li><img src="images/cream3.jpg" alt=""></li>
-                   <li><img src="images/cream4.jpg" alt=""></li>
-                </ul>
-             </div>
-             <div class="_product-images">
-                <div class="picZoomer">
-                   <img class="my_img" src="images/hair cream.png" style="margin-top: -100px;" alt="">
-                </div>
-             </div>
-          </div>
-          <div class="col-md-6">
-             <div class="_product-detail-content">
-                <p class="_p-name"> Hair cream </p>
-                <div class="_p-price-box">
-                   <div class="p-list">
-                     
-                   <div class="_p-add-cart">
-                      
-                   </div>
-                   <div class="_p-features">
-                      <span> Description About this product:- </span> <br><br>
-                      Hair cream, also known as styling cream, adds a subtle, natural-looking shine to hair. It gives a low to medium hold that tames stray hairs, but doesn’t weigh your ‘do down. Simply put, it banishes frizz without the greasiness.
-                      Cream is for casual looks, so high-maintenance styles like spikes, mohawks, and pompadours are off the menu. But if you’re aiming for hair that moves easily and looks laid back but on point, cream is the way to go.
-                      Axe Natural Look: Softening Cream does exactly this, giving light to medium hold with a natural finish.                        
-                   </div>
-                   <form action="" method="post" accept-charset="utf-8">
-                      <ul class="spe_ul"></ul>
-                      <div class="_p-qty-and-cart">
-                         <div class="_p-add-cart">
-                           
-                            <input type="hidden" name="pid" value="18" />
-                            <input type="hidden" name="price" value="850" />
-                            <input type="hidden" name="url" value="" />    
-                         </div>
-                      </div>
-                   </form>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
- </section>
  
-             
-<!-- description end -->
 
-
-
-
-<!-- footer start -->
-<div id="pg-footer">
-    <div class="topbar">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h4> Company </h4>
-            <ul>
-              <a style="color: white;">About</a><br>
-              <a style="color: white;">Experts and Spokesmodels</a>
-            </ul>
-        </div>
+<header id="header">
+  <!--  Brand Logo  -->
+  <a class="nav-brand" href="" target="_blank">
+    <img id="header-img" src="https://i.postimg.cc/8czjYqkS/Minimal-Premade-Logos-V02-04.png" alt="Pixel Skincare">
+  </a>
   
-        <div class="col-sm-4">
-            <h4> Customer Services </h4>
-            <ul>
-              <a style="color: white;">My Account</a>
-            </ul>  
-        </div>
-        
-        <div class="col-sm-4">
-            <h4> More to Explore </h4>
-            <ul>
-              <a style="color: white;">Beauty Magazine</a><br>
-              <a style="color: white;">Tools and Consultations</a><br>
-              <a style="color: white;">Offers</a>
-            </ul>
-            <br>
-            <br>
-            
-        </div>
-          <div class="col-sm-8">
-            <ul>
-              <li><i class="fas fa-phone-alt" aria-hidden="true"></i> +923008342950</li>
-              <li>|</li>
-              <li><a href="mailto:"><i class="far fa-envelope" aria-hidden="true"></i> hair-care@hotmail.com</a></li>
-              <li>|</li>
-              <li><i class="far fa-clock"aria-hidden="true"></i> 24/7</li>
-              <li>|</li>
-              <li><i class="fas fa-map-marker-alt"></i> Location</li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul class="social-icon">
-              <li class="followus-label">Follow Us:</li>
-              <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <!--  Toggle Menu for Mobile  -->
+  
+  <input type="checkbox" id="toggle-menu" role="button">
+  <label for="toggle-menu" class="toggle-menu">Menu</label>
+  
+  <!--  Menus  -->
+  <nav id="nav-bar" class="navbar">
+    <ul class="menu">
+      <li><a class="nav-link" href="#featured">New in!</a></li>
+      <li><a class="nav-link" href="#collections">Collections</a></li>
+      <li><a class="nav-link" href="#about">About</a></li>
+      <li><a class="nav-link" href="#contact">Contact</a></li>
+      <li><a class="nav-link" href="home.html">More</a></li>
+    </ul>
+    <ul class="social-menu">
+      <li><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+      <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="hero-img">
+    <img src="images/landing.png" alt="Pixel Skincare">
+  </div>
+  <div class="hero-text">
+    <h1>Your Hair</br> Would Loved It!</h1>
+    <a href="#featured" class="btn">Explore</a>
+  </div>
+</div>
+
+<!-- Featured Section -->
+<section id="featured">
+  <div class="title title-left">
+    <span class="line"></span><h3>New Friend!</h3>
+  </div>
+  <div class="wrapper">
+    <div class="image">
+      <img src="images/land 2.png" alt="Pixel Facial Cream">
+    </div>
+    <div class="text">
+      <h2>Hs Hair Cream</h2>
+      <p>A lightweight formula that packs a punch with avocado protein extract to strengthen hair own moisture barrier, sealing in hydration to protect, nourish and soften your hair.</p>
+      <a href="#" class= btn btn-dark>Details</a>
     </div>
   </div>
-  <!-- footer end -->
-  <center><p class="footer">&COPY; 2021 Hair-Care | Design by Hayyan / Shahzaib </p></center>
+</section>
+
+<!-- Collection Section -->
+<section id="collections">
+  <div class="title title-right">
+    <span class="line line-right"></span><h3>Collections</h3>
+  </div>
+  <div class="wrapper">
+    <a class="box box1" href="our equipments.html">
+      <h4>Equipments</h4>
+      <div class="box-overlay"></div>
+    </a>
+    <a class="box box2" href="care products.html">
+      <h4>Care products</h4>
+      <div class="box-overlay"></div>
+    </a>
+    <a class="box box3" href="Feedback.html">
+      <h4>Feedback</h4>
+      <div class="box-overlay"></div>
+    </a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <div class="title title-left">
+    <span class="line"></span><h3>HS HAIR CARE</h3>
+  </div>
+  <div class="wrapper">
+    <div class="text">
+      <p>Since 2021, HS Hair Care has been at the forefront of the move towards organic and natural haircare.</p>
+      <p>Specialising in emerging niche natural hair care brands, HS Hair Care is a safe zone for you and your hair where we have taken special care to hand pick and offer you some of the purest and safest brands from global organic specialists.</p>
+      <p>From cutting edge science to luxurious natural indulgence, we have selected the best products and treatments for healing and improving your well-being.</p>
+    </div>
+    <div class="video-wrapper">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0EiJPmo-i-U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="wrapper">
+    <div class="form-wrapper">    
+      <h4>Contact us for any queries</h4>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+        <input type="submit" id="submit" value="OK" class="submit">
+      </form>
+    </div>
+    <div class="contact-wrapper">
+      <h4>Stay In Touch With US</h4>
+      <div class="wrapper">        
+        <ul class="social-menu">
+          <li><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+        </ul>
+        <a class="contact-footer contact-tel" href="#"><i class="fa fa-phone" aria-hidden="true"></i>001-283-4892</a>
+        <a class="contact-footer contact-email" href="#"><i class="far fa-envelope-open" aria-hidden="true"></i>Send an email</a>
+      </div>
+    </div>
+    <div class="copy-wrapper">
+      <h6><i class="fa fa-copyright" aria-hidden="true"></i> dESIGN BY  <a href="https://codepen.io/ann_">Hayyan/shahzaib</a></h6>
+    </div>
+  </div>
+</section>
+
+ 
   <script src="js/app.js"></script>
 </body>
 </html>
