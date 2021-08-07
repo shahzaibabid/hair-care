@@ -256,7 +256,7 @@ margin: 20px auto;
 }
 
 .list_yellow a:hover {
-  color: rgb(248, 142, 102);
+  color:(248, 142, 102);
   font-weight: bold;
 }
 
@@ -293,7 +293,7 @@ margin: 20px auto;
 }
 
 .cbg-2 {
-  background-color: #f88e66;
+
   height: 100%;
   padding:10px 20px;
   border-radius: 20px;
@@ -503,7 +503,7 @@ h3 {
 }
 
 h3:hover {
-  background: -webkit-linear-gradient(#f88e66, #bfaf36);
+ 
   
   -webkit-text-fill-color: transparent;
 }
