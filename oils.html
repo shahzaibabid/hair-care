@@ -114,33 +114,112 @@
        </ul>
    </nav>
    </div>
-   <style>
-    .pg-footer{
-       width: 100%;
-       height: 180px;
-       background-color:#000;
-       display: flex;
-       flex-wrap: wrap;
-       padding: 20px;
-       text-decoration: none;
-       color: white;
-       text-align: center;
-       margin-bottom: 100px;
-       box-sizing: border-box;
-       border-radius: 10px;
-     }
-     .footer{
-       width: 100%;
-       height: 30px;
-       background: #000;
-       color: white;
-       text-align: center;
-       border:1px solid white;
-       margin-bottom: 0px;
-       border-color:#ecb807;
-     }
- </style>
 
+   <center><img src="images/oil2.png" width="300px" height="300px" class="img-thumbnail" alt="..."></center>
+   <br>
+   <center><h1 class=" o-text__heading-2 c-product-overview__title" itemprop="name"> Anti-Hair Fall Hair Oil </h1></center>
+   <center><p class="c-product-overview__description o-text__body" itemprop="description">Absolute Hair Revival</p></center>
+   <br>
+   <button type="button" class="collapsible">About this product</button>
+    <div class="content">
+      <br>
+      <p>
+        Himalaya's Anti-Hair Fall Hair Oil help reduce hair fall and promotes hair growth. It is enriched with the goodness of Bhringaraja and Amalaki which are known to strengthen the hair root and fight hair fall.
+      </p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >How to use</button>
+    <div class="content">
+      <br>
+      <p>Part your hair and apply Anti-Hair Fall Hair Oil on the scalp. Massage the scalp gently in a circular motion using your fingertips so that the oil is absorbed into the scalp. Leave for an hour or more before washing.</p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >ingredients</button>
+    <div class="content">
+      <br>
+      <p>
+        <li>Amalaki, a natural hair tonic used extensively in Ayurveda, is an effective ingredient for management of the hair and scalp. It is known to strengthen hair and promote hair growth.</li>
+        <br>
+        <li>Bhringaraja is known to promote hair growth and strengthen the hair,and keeping hair healthy.</li>
+      </p>
+    </div>  
+    <br><br><br><br>
+   <style>
+
+    .collapsible {
+      background-color:#ecb807;
+      color: black;
+      cursor: pointer;
+      margin-top: 20px;
+      padding: 40px;
+      border-color: black;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+    }
+    
+    
+    
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    
+            .img-thumbnail{
+                background-color: black;
+                border-color: #ecb807;
+                border-radius: 30px;
+            }
+    
+        .pg-footer{
+           width: 100%;
+           height: 180px;
+           background-color:#000;
+           display: flex;
+           flex-wrap: wrap;
+           padding: 20px;
+           text-decoration: none;
+           color: white;
+           text-align: center;
+           margin-bottom: 100px;
+           box-sizing: border-box;
+           border-radius: 10px;
+         }
+         .footer{
+           width: 100%;
+           height: 30px;
+           background: #000;
+           color: white;
+           text-align: center;
+           border:1px solid white;
+           margin-bottom: 0px;
+           border-color:#ecb807;
+         }
+     </style>
+    
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+      </script>
+    
+    
 
 <!-- footer start -->
 <div id="pg-footer">

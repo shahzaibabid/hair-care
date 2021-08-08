@@ -114,7 +114,85 @@
        </ul>
    </nav>
    </div>
-   <style>
+
+   <center><img src="images/serum.png" width="300px" height="300px" class="img-thumbnail" alt="..."></center>
+   <br>
+   <center><h1 class=" o-text__heading-2 c-product-overview__title" itemprop="name"> Re-Alive Hair Serum</h1></center>
+   <center><p class="c-product-overview__description o-text__body" itemprop="description">Absolute Revival</p></center>
+   <br>
+   <button type="button" class="collapsible">About this product</button>
+    <div class="content">
+      <br>
+      <p>
+        A deeply reparative serum that helps to give a new life to highly damaged hair, dry rough lengths, and unmanageable locks. This repairing serum contains Argan Oil which promotes healthier, glossier, and thicker hair & helps to nourish, rebuilding and restoring the structure of hair to renew elasticity, shine, and softness. It helps to radiate a gorgeous shine and makes hair soft and pleasant to touch.
+      </p>
+    </div>
+    <br>
+   <button type="button" class="collapsible">Key Benefits</button>
+    <div class="content">
+      <br>
+      <p>
+        <li> Helps to Smoothens dry and damaged hair.</li>
+        <br>
+        <li>Helps to reduce frizz.</li>
+        <br>
+        <li>Immediately adds shine.</li>
+        <br>
+        <li>Non-sticky.</li>
+        <br>
+        <li> Makes it easier to detangle your hair.</li>
+        <br>
+        <li>Free of sulfates, parabens, and other harmful chemicals.</li>
+      </p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >Application</button>
+    <div class="content">
+      <br>
+      <p>Use on damp hair. Dispense one or two pumps of Vince Hair Serum into your palm according to your hair length. Rub your palms together and distribute evenly throughout hair. Do not rinse. Style your hairs as desired.</p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >ingredients</button>
+    <div class="content">
+      <br>
+      <p>
+        Cyclopentasiloxane, Dimethiconol. Phenyl Trimethicone. Argania Spinsosa (Argan) Oil, Lavender Oil.
+      </p>
+    </div>  
+    <br><br><br><br>
+
+<style>
+
+.collapsible {
+  background-color:#ecb807;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 40px;
+  border-color: black;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+        .img-thumbnail{
+            background-color: black;
+            border-color: #ecb807;
+            border-radius: 30px;
+        }
+
     .pg-footer{
        width: 100%;
        height: 180px;
@@ -140,6 +218,23 @@
        border-color:#ecb807;
      }
  </style>
+ 
+ <script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 <!-- footer start -->
 <div id="pg-footer">

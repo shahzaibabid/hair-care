@@ -114,10 +114,110 @@
        </ul>
    </nav>
    </div>
+   <center><img src="images/spray.png" width="300px" height="300px" class="img-thumbnail" alt="..."></center>
+   <br>
+   <center><h1 class=" o-text__heading-2 c-product-overview__title" itemprop="name"> Sabalon Hair Spray For <br>Unisex - 420 ml</h1></center>
+   <center><p class="c-product-overview__description o-text__body" itemprop="description">Beauty </p></center>
+    <br>
+   <button type="button" class="collapsible">About this product</button>
+    <div class="content">
+      <br>
+      <p>
+        <li>Hairspray has been specifically formulated to soften, smooth and add shine to dry, damaged hair.</li>
+        <br>
+        <li>Its ultra fine mist leaves hair feeling clean with a lightweight, soft, shiny finish and a satin touch.</li>
+        <br>
+        <li>For perfect hold, complete any hairstyle with a strong hold hairspray.</li>
+      </p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >features</button>
+    <div class="content">
+      <br>
+      <p>
+        Very reasonable
+        <br>
+        Good fragrance
+        <br>
+        Lasts up to 10 – 12 hours
+        <br>
+        Nice packaging
+        <br>
+        Easy to apply
+        <br>
+        Works instantly
+        <br>
+        Easily available
+      </p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >Specification</button>
+    <div class="content">
+      <br>
+      <p>
+        Unisex: Suitable For Both Male’s & Female’s
+        <br>
+        14.74 FL Oz / 420 ML
+        <br>
+        Hair Fixer
+        <br>
+        Invisible Hold
+        <br>
+        Color: Red
+      </p>
+    </div>
+    <br>
+    <button type="button" class="collapsible" >How To Use</button>
+    <div class="content">
+      <br>
+      <p>
+        Shake can before use. Hold can upright 10-12 inches away from hair and spray. (Don’t spray on a single spot for too long. Take turns).
+        <br>
+        Sabalon Hair Spray
+        <br>
+        Men & Women Best Choice
+        <br>
+        For All Types Of Hair
+        <br>
+        Branded Original Hair Spray
+        <br>
+        Best Spray For Styling Spray
+      </p>
+    </div>    
+    <br><br><br><br>
+
+<style>
+
+.collapsible {
+  background-color:#ecb807;
+  color: black;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 40px;
+  border-color: black;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
 
 
-   <style>
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+        .img-thumbnail{
+            background-color: black;
+            border-color: #ecb807;
+            border-radius: 30px;
+        }
+
     .pg-footer{
        width: 100%;
        height: 180px;
@@ -143,6 +243,23 @@
        border-color:#ecb807;
      }
  </style>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+  </script>
 
 
 <!-- footer start -->
