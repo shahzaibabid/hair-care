@@ -118,7 +118,7 @@ header{
 header:before{
   content: "";
   position: absolute;
-  background-color: #ffe9ef;
+  background-color: #ecb807;
   width: 100%;
   height: 68%;
   z-index: -1;
@@ -154,7 +154,7 @@ input[type="checkbox"]:checked ~ .navbar{
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #ffe9ef;
+  background-color: #ecb807;
   justify-content: space-evenly;
   align-items: center;
   z-index: -2;
@@ -201,7 +201,7 @@ a.nav-link:focus{
 	display: flex;
 	height: 100vh;
 	align-items: center;
-	background: #f5d9d6 url("https://i.postimg.cc/9fTzqwtw/flower2.png") no-repeat right bottom;
+	background-color: #ecb807 url("https://i.postimg.cc/9fTzqwtw/flower2.png") no-repeat right bottom;
 }
 .hero-img img{
   display: none;
@@ -230,7 +230,7 @@ a.nav-link:focus{
   display: block;
   position: relative;
   padding: 1.3em;
-  background-color: #f5d9d6;
+  background-color: #a8a392;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -241,7 +241,7 @@ a.nav-link:focus{
   left: 0;
   width: 100%;
   height: 100%;
-	border: solid 3px #fff;
+	border: solid 3px #a8a392;
 	transform: translate(8px, 8px);
   transition: all 1s ease;
 }
@@ -256,7 +256,7 @@ a.nav-link:focus{
 
 /* About Section */
 #about{
-  background-color: #f5d9d6;
+  background-color: #ecb807;
 }
 section#about{
   padding-bottom: 5.8em;
@@ -293,7 +293,7 @@ section#contact{
   display: block;
   content: "";
   margin: 2em auto;
-  border-bottom: solid 1px #dadada;
+  border-bottom: solid 1px #ecb807;
 }
 form{
   display: flex;
@@ -306,7 +306,7 @@ form input:last-child{
   flex: 1 0 20%;
   border-left: 0;  
   cursor: pointer;
-  background-color: #f5d9d6;
+  background-color: #ecb807;
   transition: all .25s ease;
 }
 #submit:hover {
@@ -344,7 +344,7 @@ input{
   border-left: 0;
 }
 .contact-footer:hover{
-  background-color: #f5d9d6;
+  background-color: #ecb807;
 }
 .contact-tel{
   flex: 1 0 50%;
@@ -522,7 +522,7 @@ input{
     display: block;
     content: "";
     margin: 2em auto;
-    border-bottom: solid 1px #dadada;
+    border-bottom: solid 1px #ecb807;
   }
 }
 @media(min-width: 992px){
@@ -601,19 +601,19 @@ input{
 <body>
  
 
-<header id="header">
+<header id="header" style="background-color: #ecb807;;">
   <!--  Brand Logo  -->
-  <a class="nav-brand" href="" target="_blank">
-    <img id="header-img" src="images/logo.png ">
+  <a class="nav-brand" href="" target="_blank" style="background-color: #ecb807;;">
+    <img id="header-img" src="images/logo.png " style="background-color: #ecb807;;">
   </a>
   
   <!--  Toggle Menu for Mobile  -->
   
-  <input type="checkbox" id="toggle-menu" role="button">
-  <label for="toggle-menu" class="toggle-menu">Menu</label>
+  <input type="checkbox" id="toggle-menu" role="button" style="background-color: #ecb807;">
+  <label for="toggle-menu" class="toggle-menu" style="background-color: #ecb807;">Menu</label>
   
   <!--  Menus  -->
-  <nav id="nav-bar" class="navbar">
+  <nav id="nav-bar" class="navbar" style="background-color: #ecb807;">
     <ul class="menu">
       <li><a class="nav-link" href="#featured">New in!</a></li>
       <li><a class="nav-link" href="#collections">Collections</a></li>
@@ -621,7 +621,7 @@ input{
       <li><a class="nav-link" href="#contact">Contact</a></li>
       <li><a class="nav-link" href="home.html">More</a></li>
     </ul>
-    <ul class="social-menu">
+    <ul class="social-menu" style="background-color: #ecb807;;">
       <li><a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a></li>
       <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
       <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -631,18 +631,18 @@ input{
 </header>
 
 <!-- Hero Section -->
-<div class="hero">
-  <div class="hero-img">
+<div class="hero" style="background-color: #ecb807;;">
+  <div class="hero-img" style="background-color: #ecb807;;">
     <img src="images/landing.png" alt="Pixel Skincare">
   </div>
-  <div class="hero-text">
+  <div class="hero-text" style="background-color: #ecb807;;">
     <h1>Your Hair</br> Would Loved It!</h1>
     <a href="#featured" class="btn">Explore</a>
   </div>
 </div>
 
 <!-- Featured Section -->
-<section id="featured">
+<section id="featured" style="background-color:#ecb807;">
   <div class="title title-left">
     <span class="line"></span><h3>New Friend!</h3>
   </div>
@@ -659,7 +659,7 @@ input{
 </section>
 
 <!-- Collection Section -->
-<section id="collections">
+<section id="collections" style="background-color: #ecb807;">
   <div class="title title-right">
     <span class="line line-right"></span><h3>Collections</h3>
   </div>
@@ -697,7 +697,7 @@ input{
 </section>
 
 <!-- Contact Section -->
-<section id="contact">
+<section id="contact" style="background-color: #ecb807;">
   <div class="wrapper">
     <div class="form-wrapper">    
       <h4>Contact us for any queries</h4>
